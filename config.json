@@ -1,0 +1,13 @@
+{
+  "embeddings": [
+    {
+      "tensorName": "Food in Medieval Greek Texts",
+      "tensorShape": [
+        1000,
+        50
+      ],
+      "tensorPath": "https://raw.githubusercontent.com/dan-myrtz/embedding-projector-visualization/main/medieval_vectors.tsv",
+      "metadataPath": "https://raw.githubusercontent.com/dan-myrtz/embedding-projector-visualization/main/medieval_metadata.tsv"
+    }
+  ]
+}
