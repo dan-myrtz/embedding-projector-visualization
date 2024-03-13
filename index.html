@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Embedding Projector for the Greek Medieval Texts corpus.</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tensorflow/1.0.0/tf.min.js"></script>
+</head>
+<body>
+    <div id="projector"></div>
+    <script>
+        // Assuming tf.tensorboard.ProjectorPlugin or a similar API is available
+        // Note: As of my last update, this exact API may not be available. 
+        // You may need to adapt this to the library or version you're using.
+
+        const config = {
+          embeddings: [
+            {
+              tensorName: "My tensor",
+              tensorShape: [1000, 50],
+              tensorPath: "https://raw.githubusercontent.com/.../tensors.tsv",
+              metadataPath: "https://raw.githubusercontent.com/.../optional.metadata.tsv",
+              bookmarksPath: "https://raw.githubusercontent.com/.../bookmarks.txt",
+              sprite: {
+                imagePath: "https://github.com/.../optional.sprite.png",
+                singleImageDim: [32, 32]
+              }
+            }
+          ]
+        };
+
+        tf.tensorboard.projector.loadProjector(document.getElementById("projector"), config);
+
+    </script>
+</body>
+</html>
